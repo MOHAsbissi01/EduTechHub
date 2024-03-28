@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instructors</title>
+    <style>
+        /* Basic reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #F0FBFC; /* Light blue background */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transform: translateY(-50px);
+            animation: slideIn 0.5s forwards;
+        }
+        h1 {
+            color: #06BBCC; /* Bright blue for the heading */
+            margin-bottom: 20px;
+        }
+        input[type=submit] {
+            background-color: #06BBCC; /* Bright blue for buttons */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px; /* Space between buttons */
+            animation: fadeIn 2s;
+        }
+        input[type=submit]:hover {
+            background-color: #058CA6; /* Slightly darker blue on hover */
+            animation: pulse 1s infinite;
+        }
+
+        /* Keyframes for animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Are you an administrator?</h1>
+        <form action="index.html">
+            <input type="submit" value="No">
+        </form>
+        <form action=".DASHBOARD/index.html">
+            <input type="submit" value="Yes">
+        </form>
+    </div>
+</body>
+</html>
